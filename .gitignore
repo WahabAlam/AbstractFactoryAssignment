@@ -1,0 +1,18 @@
+# macOS system files
+.DS_Store
+
+# Java class files
+*.class
+
+# Build output folders
+/out/
+/bin/
+/target/
+
+# Logs
+*.log
+
+# IDE project files
+*.idea/
+*.vscode/
+*.iml
