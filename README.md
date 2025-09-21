@@ -20,3 +20,10 @@ AbstractFactoryAssignment/
   ```bash
   java test.MainTest
   ```
+## 🧪 Test Results
+The program was tested with:
+- Brand A Bulb (set to 60W)
+- Brand B Lock (set to 25%)
+
+### Output Screenshot
+![Test Output](screenshots/output.png)
