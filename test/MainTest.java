@@ -1,15 +1,28 @@
+import java.util.Scanner;
+
 public class MainTest {
     public static void main(String[] args) {
-        // Example 1: Brand A Bulb
-        AbstractFactory factoryA = new FactoryA();
-        Bulb bulbA = factoryA.createBulb();
-        bulbA.setPowerUsage(60); // simulate reading from file
-        bulbA.showSpecs();
+        Scanner in = new Scanner(System.in);
+        UsageFactory usage = new CsvUsageFactory("data/device_usage.csv");
 
-        // Example 2: Brand B Lock
-        AbstractFactory factoryB = new FactoryB();
-        Lock lockB = factoryB.createLock();
-        lockB.setBatteryConsumption(25); // simulate reading from file
-        lockB.showSpecs();
+        // Choose brand
+        System.out.print("Choose brand (A/B): ");
+        String b = in.nextLine().trim();
+        AbstractFactory factory = (b.equalsIgnoreCase("A"))
+                ? new FactoryA(usage)
+                : new FactoryB(usage);
+
+        // Choose product
+        System.out.print("Create which product (Bulb/Lock): ");
+        String p = in.nextLine().trim();
+
+        // Create; factories set usage AFTER creation using the CSV
+        if (p.equalsIgnoreCase("Bulb")) {
+            Bulb bulb = factory.createBulb();
+            bulb.showSpecs();
+        } else {
+            Lock lock = factory.createLock();
+            lock.showSpecs();
+        }
     }
 }

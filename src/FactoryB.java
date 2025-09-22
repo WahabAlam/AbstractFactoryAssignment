@@ -1,11 +1,24 @@
 public class FactoryB implements AbstractFactory {
+    private final UsageFactory usage;
+
+    public FactoryB(UsageFactory usage) {
+        this.usage = usage;
+    }
+
     @Override
     public Bulb createBulb() {
-        return new BulbB();
+        Bulb b = new BulbB();
+        b.setPowerUsage(usage.load(getBrand(), "Bulb"));
+        return b;
     }
 
     @Override
     public Lock createLock() {
-        return new LockB();
+        Lock l = new LockB();
+        l.setBatteryConsumption(usage.load(getBrand(), "Lock"));
+        return l;
     }
+
+    @Override
+    public String getBrand() { return "BrandB"; }
 }
