@@ -48,7 +48,7 @@ AbstractFactoryAssignment/
 │   └── LockB.java
 │
 └── test/
-    └── Main.java                  # simple driver: choose brand/product and show specs
+    └── MainTest.java                  # simple driver: choose brand/product and show specs
 ```
 
 ---
@@ -75,11 +75,19 @@ BrandB,Lock,25
 
 From the project root:
 
+Mac:
 ```bash
 rm -rf out
 javac -d out src/*.java test/*.java
-java -cp out Main
+java -cp out MainTest
 ```
+Windows:
+```bash
+rmdir -Recurse -Force out 2>$null
+javac -d out src\*.java test\*.java
+java -cp out MainTest
+```
+
 
 You’ll be prompted in the console:
 - `Choose brand (A/B):`
@@ -102,7 +110,6 @@ With the default CSV:
 
 ## 🧪 Test Results (screenshot)
 
-Add your terminal screenshot here (already in `screenshots/output.png`):
 
 ![Test Output](screenshots/output.png)
 
