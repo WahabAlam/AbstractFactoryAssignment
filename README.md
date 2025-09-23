@@ -29,7 +29,7 @@ AbstractFactoryAssignment/
 │── README.md
 │── .gitignore
 │── screenshots/
-│   └── output.png                 # your terminal screenshot
+│   └── output.png                 # terminal screenshot
 │
 ├── data/
 │   └── device_usage.csv           # fixed values used at runtime
