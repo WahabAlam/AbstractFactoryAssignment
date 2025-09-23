@@ -22,6 +22,9 @@ This satisfies the assignment:
 
 ---
 
+## UML Diagram
+![UML Diagram](UMLDiagram.jpg)
+
 ## 📂 Project Structure
 
 ```
