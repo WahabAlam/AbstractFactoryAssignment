@@ -24,5 +24,6 @@ public class MainTest {
             Lock lock = factory.createLock();
             lock.showSpecs();
         }
+        in.close();
     }
 }
