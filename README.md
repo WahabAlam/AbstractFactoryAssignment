@@ -1,5 +1,9 @@
 # Abstract Factory + Factory Method — Smart Home Devices
 
+Wahab Alam 100914144
+Jeshurun Constantine, 100922345
+Jeffrey Atunure, 100880672
+
 This project demonstrates two design patterns in Java:
 
 - **Abstract Factory**: Choose a *brand family* (BrandA or BrandB) and create related products (Bulb, Lock).
